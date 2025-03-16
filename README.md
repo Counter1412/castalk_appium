@@ -4,7 +4,7 @@
 3. Install appium server and setup path
 4. Install allure (and java) and setup path
 5.  Run the test
-   + npm smoke-test-suite
+   + npm run smoke-test-suite
 6. Prepare the report and open report
-   + prepare-report-after-run
-   + open-test-report
+   + npm run prepare-report-after-run
+   + npm run open-test-report
