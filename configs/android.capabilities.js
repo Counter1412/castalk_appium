@@ -7,7 +7,7 @@ const capabilities = {
         "appium:udid": "3EB7DF109FCC7EF9",
         "appium:appPackage": "com.castalk.app.dev",
         "appium:appActivity": "com.castalk.app.feature.user.auth.AuthActivity",
-        "appium:automationName": "UiAutomator2"
+        "appium:automationName": "UiAutomator2",
     },
     test: {
         "platformName": "Android",
@@ -15,7 +15,7 @@ const capabilities = {
         "appium:udid": "3EB7DF109FCC7EF9",
         "appium:appPackage": "com.castalk.app.qa",
         "appium:appActivity": "com.castalk.app.feature.user.auth.AuthActivity",
-        "appium:automationName": "UiAutomator2"
+        "appium:automationName": "UiAutomator2",
     },
     stage: {
         "platformName": "Android",
@@ -23,7 +23,7 @@ const capabilities = {
         "appium:udid": "3EB7DF109FCC7EF9",
         "appium:appPackage": "com.castalk.app.stage",
         "appium:appActivity": "com.castalk.app.feature.user.auth.AuthActivity",
-        "appium:automationName": "UiAutomator2"
+        "appium:automationName": "UiAutomator2",
     },
     prod: {
         "platformName": "Android",
@@ -31,7 +31,7 @@ const capabilities = {
         "appium:udid": "3EB7DF109FCC7EF9",
         "appium:appPackage": "com.castalk.app.prod",
         "appium:appActivity": "com.castalk.app.feature.user.auth.AuthActivity",
-        "appium:automationName": "UiAutomator2"
+        "appium:automationName": "UiAutomator2",
     }
 };
 

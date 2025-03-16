@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//android.widget.TextView[@text=\"Agree and Continue\"]/following-sibling::android.widget.Button"
+}
