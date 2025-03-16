@@ -1,0 +1,52 @@
+name: Appium Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  appium-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start Appium server
+        run: |
+          npm install -g appium
+          appium --log appium.log &
+
+      - name: Set up Android Emulator
+        if: runner.os == 'Linux'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: default
+          arch: x86_64
+          profile: Nexus 6
+          avd-name: test-emulator
+          force-avd-creation: false
+          disable-animations: true
+          script: adb devices
+
+      - name: Run WDIO Appium Tests
+        run: TEST_ENV=prod npx wdio wdio.conf.js --suite smoke
+
+      - name: Upload Appium logs if tests fail
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: appium-logs
+          path: appium.log
