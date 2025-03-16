@@ -32,6 +32,15 @@ const capabilities = {
         "appium:appPackage": "com.castalk.app.prod",
         "appium:appActivity": "com.castalk.app.feature.user.auth.AuthActivity",
         "appium:automationName": "UiAutomator2",
+    },
+    CI: {
+        "platformName": "Android",
+        "appium:deviceName": "emulator-5554",
+        "appium:app": process.env.APK_PATH || "/path/to/app.apk",
+        "appium:automationName": "UiAutomator2",
+        "appium:appPackage": "com.ca.app.prod",
+        "appium:appActivity": "com.ca.app.feature.user.auth.AuthActivity",
+        "appium:noReset": true
     }
 };
 
