@@ -3,8 +3,9 @@
    + npm i
 3. Install appium server and setup path
 4. Install allure (and java) and setup path
-5.  Run the test
+5. Update device id and device name in capabilities
+6.  Run the test
    + npm run smoke-test-suite
-6. Prepare the report and open report
+7. Prepare the report and open report
    + npm run prepare-report-after-run
    + npm run open-test-report
