@@ -1,0 +1,19 @@
+{
+  "actions": [
+    {
+      "id": "action9",
+      "type": "key",
+      "parameters": {},
+      "actions": [
+        {
+          "type": "keyDown",
+          "value": "1"
+        },
+        {
+          "type": "keyUp",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}
