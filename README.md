@@ -5,6 +5,6 @@
 4. Install allure (and java) and setup path
 5.  Run the test
    + npm smoke-test-suite
-5. Prepare the report and open report
+6. Prepare the report and open report
    + prepare-report-after-run
    + open-test-report
